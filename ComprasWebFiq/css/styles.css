@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* Encabezado */
+header {
+  background-color: #004671;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #a28f23;
+}
+
+/* Submenú */
+nav ul .submenu {
+  display: none;
+  position: absolute;
+  background-color: #01314e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+}
+
+nav ul li:hover .submenu {
+  display: block;
+}
+
+nav ul .submenu li {
+  display: block;
+  margin: 5px 0;
+}
+
+nav ul .submenu li a {
+  font-weight: normal;
+  color: #ddd;
+}
+
+nav ul .submenu li a:hover {
+  color: #a28f23;
+}
+
+/* Banner */
+.banner {
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.banner-content {
+  z-index: 1;
+}
+
+.banner h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.banner button {
+  background-color: #004671;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.banner button:hover {
+  background-color: #01314e;
+  color: #a28f23;
+}
+
+/* Sección de marcas */
+.marcas {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.marcas h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.marca-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.marca-card:hover {
+  transform: translateY(-5px);
+}
+
+.marca-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.marca-card h3 {
+  padding: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Pie de página */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 32px;
+  }
+
+  .banner p {
+    font-size: 18px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul .submenu {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  nav ul li:hover .submenu {
+    display: block;
+  }
+}
